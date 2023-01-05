@@ -1,0 +1,18 @@
+{
+    "endDrawer": {
+        "menu": [
+            {
+                "title": "Home",
+                "subtitle": "Home page"
+            },
+            {
+                "title": "Language",
+                "subtitle": "Select a language"
+            },
+            {
+                "title": "Logout",
+                "subtitle": "Logout system"
+            }
+        ]
+    }
+}

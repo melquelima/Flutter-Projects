@@ -1,0 +1,18 @@
+{
+    "endDrawer": {
+        "menu": [
+            {
+                "title": "Inicio",
+                "subtitle": "Tela inicial"
+            },
+            {
+                "title": "Idioma",
+                "subtitle": "Selecione um idioma"
+            },
+            {
+                "title": "Sair",
+                "subtitle": "Finalizar sessão"
+            }
+        ]
+    }
+}
