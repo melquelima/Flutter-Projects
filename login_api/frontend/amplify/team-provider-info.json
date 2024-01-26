@@ -1,0 +1,59 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bbamericasbank-staging-220122-authRole",
+      "UnauthRoleArn": "arn:aws:iam::970122919201:role/amplify-bbamericasbank-staging-220122-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::970122919201:role/amplify-bbamericasbank-staging-220122-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bbamericasbank-staging-220122-deployment",
+      "UnauthRoleName": "amplify-bbamericasbank-staging-220122-unauthRole",
+      "StackName": "amplify-bbamericasbank-staging-220122",
+      "StackId": "arn:aws:cloudformation:us-east-1:970122919201:stack/amplify-bbamericasbank-staging-220122/d769fe10-057e-11ee-ad08-0e043d882431",
+      "AmplifyAppId": "d38xhz54uwro4e",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-bbamericasbank-staging-220122-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "bbamericasbank": {
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::970122919201:role/Cognito_BBA_ApplicationAuth_Role",
+          "authRoleName": "Cognito_BBA_ApplicationAuth_Role",
+          "identityPoolId": "us-east-1:085d11c9-1e5a-4c9f-b3ca-f0a864fcd525",
+          "identityPoolName": "BBA_Application",
+          "nativeClientId": "18f4evgur111f0ha6184fti0bl",
+          "unauthRoleArn": "arn:aws:iam::970122919201:role/Cognito_BBA_ApplicationUnauth_Role",
+          "unauthRoleName": "Cognito_BBA_ApplicationUnauth_Role",
+          "userPoolId": "us-east-1_RoMHE0dzR",
+          "userPoolName": "BBA_Application",
+          "webClientId": "18f4evgur111f0ha6184fti0bl"
+        }
+      },
+      "function": {
+        "validateCustomer": {
+          "deploymentBucketName": "amplify-bbamericasbank-staging-220122-deployment",
+          "s3Key": "amplify-builds/validateCustomer-64574757542f2b76596e-build.zip"
+        },
+        "loadPortfolio": {
+          "deploymentBucketName": "amplify-bbamericasbank-staging-220122-deployment",
+          "s3Key": "amplify-builds/loadPortfolio-55753458453430335031-build.zip"
+        },
+        "loadTransactions": {
+          "deploymentBucketName": "amplify-bbamericasbank-staging-220122-deployment",
+          "s3Key": "amplify-builds/loadTransactions-3972785048423564676d-build.zip"
+        },
+        "profile": {
+          "deploymentBucketName": "amplify-bbamericasbank-staging-220122-deployment",
+          "s3Key": "amplify-builds/profile-58496c335a5757736f4e-build.zip"
+        },
+        "statements": {
+          "deploymentBucketName": "amplify-bbamericasbank-staging-220122-deployment",
+          "s3Key": "amplify-builds/statements-4f6f4d4c6c705759762b-build.zip"
+        }
+      },
+      "api": {
+        "BBAmericasBank": {},
+        "bbamericasAPP": {}
+      }
+    }
+  }
+}

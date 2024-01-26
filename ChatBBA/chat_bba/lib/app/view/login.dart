@@ -80,7 +80,7 @@ class _LoginState extends State<Login> {
                         appController.login(
                             context, username_controller.text.toString());
                       },
-                      child: Text('Enter'),
+                      child: Text('Entrar'),
                     ),
                   ],
                 ),

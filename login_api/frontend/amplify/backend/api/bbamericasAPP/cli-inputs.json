@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "paths": {
+    "/validateCustomer": {
+      "name": "/validateCustomer",
+      "lambdaFunction": "validateCustomer",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/loadportfolio": {
+      "name": "/loadportfolio",
+      "lambdaFunction": "loadPortfolio",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
+    },
+    "/loadtransactions": {
+      "name": "/loadtransactions",
+      "lambdaFunction": "loadTransactions",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/loadprofile": {
+      "name": "/loadprofile",
+      "lambdaFunction": "profile",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
+    },
+    "/statements": {
+      "name": "/statements",
+      "lambdaFunction": "statements",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
+    }
+  }
+}

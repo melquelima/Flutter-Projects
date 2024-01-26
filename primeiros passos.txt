@@ -1,1 +1,10 @@
 https://github.com/balta-io/artigos/blob/master/flutter-instalacao-configuracao-android-windows.md
+
+
+
+
+-------COMANDOS
+
+flutetr clean -> limpa o projeto tirando os builds e libraries localmente instaladas
+flutter pub get -> atualiza as referencias no codigo
+flutter run -d windows -> roda a aplicacao no windows

@@ -1,0 +1,24 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "bbamericasbank",
+  "serviceType": "imported",
+  "region": "us-east-1",
+  "aliasAttributes": [
+    "preferred_username"
+  ],
+  "authProvidersUserPool": [],
+  "requiredAttributes": [],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [
+    "Requires Lowercase",
+    "Requires Numbers",
+    "Requires Symbols"
+  ],
+  "mfaConfiguration": "OPTIONAL",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaTypes": [
+    "SMS Text Message"
+  ]
+}

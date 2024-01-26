@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  app:
+    build: .
+    container_name: bbamericas_app_backend
+    command: python -u ./run.py
+    restart: always
+    ports:
+      - "4000:4000"
+    #volumes:
+      #- .:/app
+    networks:
+      network1:
+    environment:
+      - "TERM=xterm"
+
+    
+networks:
+  network1:
+      external:
+        name: network1

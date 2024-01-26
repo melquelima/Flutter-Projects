@@ -1,0 +1,277 @@
+{
+  "api": {
+    "BBAmericasBank": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    },
+    "bbamericasAPP": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "validateCustomer"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "loadPortfolio"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "loadTransactions"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "profile"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "statements"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "bbamericasbank": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "function": {
+    "loadPortfolio": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "loadTransactions": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "profile": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "statements": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "validateCustomer": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_bbamericasbank_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_auth_bbamericasbank_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "bbamericasbank"
+        }
+      ]
+    },
+    "AMPLIFY_function_loadPortfolio_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "loadPortfolio"
+        }
+      ]
+    },
+    "AMPLIFY_function_loadPortfolio_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "loadPortfolio"
+        }
+      ]
+    },
+    "AMPLIFY_function_loadTransactions_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "loadTransactions"
+        }
+      ]
+    },
+    "AMPLIFY_function_loadTransactions_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "loadTransactions"
+        }
+      ]
+    },
+    "AMPLIFY_function_profile_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "profile"
+        }
+      ]
+    },
+    "AMPLIFY_function_profile_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "profile"
+        }
+      ]
+    },
+    "AMPLIFY_function_statements_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "statements"
+        }
+      ]
+    },
+    "AMPLIFY_function_statements_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "statements"
+        }
+      ]
+    },
+    "AMPLIFY_function_validateCustomer_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "validateCustomer"
+        }
+      ]
+    },
+    "AMPLIFY_function_validateCustomer_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "validateCustomer"
+        }
+      ]
+    }
+  }
+}

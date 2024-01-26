@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/validateCustomer": {
+      "name": "/validateCustomer",
+      "lambdaFunction": "validateCustomer",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

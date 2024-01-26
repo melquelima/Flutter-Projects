@@ -13,6 +13,7 @@ class Predios extends StatefulWidget {
 
 class _PrediosState extends State<Predios> {
   final ScrollController listScrollController = ScrollController();
+
   List<String> itens = [
     "Vila Alpina",
     "Pinheiros",
